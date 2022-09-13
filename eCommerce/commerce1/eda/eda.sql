@@ -52,3 +52,51 @@ from
 		from retail
 		group by 1
 		order by 1) as a) as b;
+
+# 2011년 5월 신규 고객 비율 (첫 구매일이 2011년 5월인 유저)
+-- 고객별 첫 주문 일자
+with first_orders as
+(select customerId,
+	min(invoiceDate) as first_order
+from retail
+group by 1
+order by 2)
+-- 신규 고객 수, 기존 고객 수
+select count(distinct case when a.order_ym= substr(b.first_order, 1, 7) then a.customerId else null end) as new_user,
+	count(distinct case when a.order_ym!= substr(b.first_order, 1, 7) then a.customerId else null end) as old_user
+from
+	(select customerId,
+		substr(invoiceDate, 1, 7) as order_ym
+	from retail
+	where substr(invoiceDate, 1, 7)= '2011-05') as a
+	left join first_orders as b
+		on a.customerId= b.customerId;
+
+# 2011년 5월 신규 / 기존 고객의 매출
+-- 2011년 5월 고객 분류 (기존/ 신규)
+with users as
+(select distinct a.customerId,
+	case when a.order_ym= substr(b.first_order, 1, 7) then 'new_user'
+		else 'old_user'
+	end as user_type
+from
+	(select customerId,
+		substr(invoiceDate, 1, 7) as order_ym
+	from retail
+	where substr(invoiceDate, 1, 7)= '2011-05') as a
+    left join
+		(select customerId,
+			min(invoiceDate) as first_order
+		from retail
+        group by 1) as b
+		on a.customerId= b.customerId)
+
+select b.user_type,
+	sum(a.quantity* a.unitPrice)/ (select sum(quantity* unitPrice)
+									from retail
+                                    where substr(invoiceDate, 1, 7)= '2011-05')* 100 as rev
+from retail as a
+	left join users as b
+		on a.customerId= b.customerId
+where substr(a.invoiceDate, 1, 7)= '2011-05'
+group by 1;
