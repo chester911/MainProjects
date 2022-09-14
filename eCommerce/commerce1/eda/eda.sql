@@ -1,4 +1,4 @@
-use onlineretail;
+use retail_log;
 
 # 최초, 최신 주문일
 select min(invoiceDate), max(invoiceDate)
@@ -37,8 +37,8 @@ order by 1, 5 desc;
 
 # 월별 매출 비교
 select ym,
-	rev_total/ rev_prev* 100 as rev_increased,
-    arppu/ arppu_prev* 100 as arppu_increased
+	rev_total/ rev_prev* 100 as rev_ratio,
+    arppu/ arppu_prev* 100 as arppu_ratio
 from
 	(select ym,
 		rev_total,
