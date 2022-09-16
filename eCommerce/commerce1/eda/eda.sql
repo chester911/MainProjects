@@ -100,3 +100,126 @@ from retail as a
 		on a.customerId= b.customerId
 where substr(a.invoiceDate, 1, 7)= '2011-05'
 group by 1;
+
+# 대시보드용
+-- WAU 파악 가능
+select substr(invoiceDate, 1, 7) as ym,
+	yearweek(invoiceDate) as yearweek,
+    count(distinct customerId) as cust_cnt,
+    count(distinct invoiceNo) as order_cnt,
+    round(sum(quantity* unitPrice), 1) as rev
+from retail
+group by 1, 2
+order by 1, 2;
+
+# 2011년 4월~5월 국가별 매출 비교
+select a.*,
+	coalesce(b.rev_may, 0) as rev_may,
+    coalesce(round(b.rev_may- a.rev_apr, 1), 0) as rev_diff
+from
+	(select country,
+		sum(quantity* unitPrice) as rev_apr
+	from retail
+	where substr(invoiceDate, 1, 7)= '2011-04'
+	group by 1) as a
+    left join
+			(select country,
+				sum(quantity* unitPrice) as rev_may
+			from retail
+            where substr(invoiceDate, 1, 7)= '2011-05'
+            group by 1) as b
+		on a.country= b.country
+order by 2;
+
+# 주력 / 비주력 상품들의 매출 비교
+-- 1. 주력 상품부터 비교 (주력 상품 = 주문 건수 상위 20위 상품)
+-- 4월 주력 상품
+with order_rnk_apr as
+(select stockCode,
+	count(distinct invoiceNo) as order_cnt,
+    rank() over(order by count(distinct invoiceNo) desc) as rnk
+from retail
+where substr(invoiceDate, 1, 7)= '2011-04'
+group by 1)
+
+select a.*,
+	b.rev_may,
+    b.rev_may- a.rev_apr as rev_diff
+from
+	(select stockCode,
+		sum(quantity* unitPrice) as rev_apr
+	from retail
+	where substr(invoiceDate, 1, 7)= '2011-04'
+		and stockCode in (select stockCode
+						from order_rnk_apr
+						where rnk<= 20)
+	group by 1) as a
+    left join
+			(select stockCode,
+				sum(quantity* unitPrice) as rev_may
+			from retail
+            where substr(invoiceDate, 1, 7)= '2011-05'
+            group by 1) as b
+		on a.stockCode= b.stockCode
+order by 4 desc;
+
+-- 2. 비주력 상품들 주문 고객 수 비교 (주문 건수 10회 미만 상품)
+with order_rnk as
+(select stockCode,
+	count(distinct invoiceNo) as order_cnt
+from retail
+where substr(invoiceDate, 1, 7)= '2011-04'
+group by 1)
+
+select a.*,
+	b.cust_may,
+    b.cust_may- a.cust_apr as cust_diff
+from
+	(select stockCode,
+		count(distinct customerId) as cust_apr
+	from retail
+	where substr(invoiceDate, 1, 7)= '2011-04'
+		and stockCode in (select stockCode
+						from order_rnk
+						where order_cnt< 10)
+	group by 1) as a
+	left join
+			(select stockCode,
+				count(distinct customerId) as cust_may
+			from retail
+            where substr(invoiceDate, 1, 7)= '2011-05'
+            group by 1) as b
+	on a.stockCode= b.stockCode
+order by 4 desc;
+
+###
+with order_rnk_apr as
+(select stockCode,
+	count(distinct invoiceNo) as order_cnt,
+    rank() over(order by count(distinct invoiceNo) desc) as rnk
+from retail
+where substr(invoiceDate, 1, 7)= '2011-04'
+group by 1)
+
+select a.stockCode,
+	b.order_may- a.order_apr as order_diff,
+    b.cust_may- a.cust_apr as cust_diff
+from
+	(select stockCode,
+		count(distinct invoiceNo) as order_apr,
+        count(distinct customerId) as cust_apr
+	from retail
+	where substr(invoiceDate, 1, 7)= '2011-04'
+		and stockCode in (select stockCode
+						from order_rnk_apr
+						where rnk<= 20)
+	group by 1) as a
+    left join
+			(select stockCode,
+				count(distinct invoiceNo) as order_may,
+                count(distinct customerId) as cust_may
+			from retail
+            where substr(invoiceDate, 1, 7)= '2011-05'
+            group by 1) as b
+		on a.stockCode= b.stockCode
+order by 3 desc, 2 desc;
