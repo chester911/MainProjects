@@ -192,34 +192,11 @@ from
 	on a.stockCode= b.stockCode
 order by 4 desc;
 
-###
-with order_rnk_apr as
-(select stockCode,
-	count(distinct invoiceNo) as order_cnt,
-    rank() over(order by count(distinct invoiceNo) desc) as rnk
-from retail
-where substr(invoiceDate, 1, 7)= '2011-04'
-group by 1)
-
-select a.stockCode,
-	b.order_may- a.order_apr as order_diff,
-    b.cust_may- a.cust_apr as cust_diff
-from
-	(select stockCode,
-		count(distinct invoiceNo) as order_apr,
-        count(distinct customerId) as cust_apr
+# 건당 주문 금액, 주문량(개수) 비교
+select
+	(select sum(quantity* unitPrice)/ count(distinct invoiceNo) as rev_per_order_apr
 	from retail
-	where substr(invoiceDate, 1, 7)= '2011-04'
-		and stockCode in (select stockCode
-						from order_rnk_apr
-						where rnk<= 20)
-	group by 1) as a
-    left join
-			(select stockCode,
-				count(distinct invoiceNo) as order_may,
-                count(distinct customerId) as cust_may
-			from retail
-            where substr(invoiceDate, 1, 7)= '2011-05'
-            group by 1) as b
-		on a.stockCode= b.stockCode
-order by 3 desc, 2 desc;
+	where substr(invoiceDate, 1, 7)= '2011-04')-
+	(select sum(quantity* unitPrice)/ count(distinct invoiceNo) as rev_per_order_may
+	from retail
+	where substr(invoiceDate, 1, 7)= '2011-05') as rev_per_order_diff;
