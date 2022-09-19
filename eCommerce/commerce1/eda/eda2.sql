@@ -65,6 +65,59 @@ from cust_may
 where stockCode in (select stockCode
 				from product_status)
 order by 3 desc;
+-- 2만원 이하의 제품을 많이 구매함
+-- 케이크 스탠드, 깃발 등 장식품을 주로 구매함
+
+# 기존 고객들의 주문 1회당 평균 결제 금액?
+-- 1주일 단위로 집계
+select yearweek(invoiceDate) as yearweek,
+	count(distinct customerId) as old_user_cnt,
+    count(distinct invoiceNo) as order_cnt,
+    round(sum(quantity* unitPrice), 1) as rev_total,
+    round(sum(quantity* unitPrice)/ count(distinct customerId), 1) as ARPPU,
+    round(sum(quantity* unitPrice)/ count(distinct invoiceNo), 1) as rev_per_order
+from
+	(select *
+	from retail
+	where substr(invoiceDate, 1, 7)= '2011-05'
+		and customerId not in (select customerId
+							from
+								(select customerId,
+									min(substr(invoiceDate, 1, 10)) as first_order
+								from retail
+								group by 1) as a
+							where substr(first_order, 1, 7)= '2011-05')) as a
+group by 1
+order by 1;
+
+# 2011년 20주차 고객들
+-- 구매 횟수가 많은 고객
+-- 구매 횟수 3회 이상 고객들이 많이 찾은 상품 (상품별 구매 고객수, 주문 건수)
+select stockCode,
+	description,
+    count(distinct customerId) as cust_cnt,
+    count(distinct invoiceNo) as order_cnt,
+    round(count(distinct invoiceNo)/ count(distinct customerId), 1) as order_per_cust
+from retail
+where yearweek(invoiceDate)= '201120'
+	and customerId in (select customerId
+					from
+                    -- 구매 횟수 3회 이상 고객들
+						(select distinct customerId,
+							count(distinct invoiceNo) as order_cnt
+						from retail
+						where yearweek(invoiceDate)= '201120'
+							and customerId not in (select customerId
+												from
+													(select customerId,
+														min(invoiceDate) as first_order
+													from retail
+													group by 1) as a
+												where substr(first_order, 1, 7)= '2011-05')
+						group by 1) as a
+                        where order_cnt>= 3)
+group by 1
+order by 3 desc;
 
 # 2. 신규 고객을 유치하기 위한 방안은?
 
