@@ -20,9 +20,3 @@ update wow.history set `timestamp`= str_to_date(timestamp, '%m/%d/%Y %H:%i:%s');
 select *
 from wow.history
 limit 100;
-
-select substr(timestamp, 1, 7) as ym,
-	count(distinct user_id) as user_cnt
-from wow.history
-group by 1
-order by 1;
