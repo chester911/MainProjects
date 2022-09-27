@@ -1,0 +1,32 @@
+race,charclass,user_cnt
+Orc,Warrior,3034
+"Blood Elf",Paladin,1897
+Troll,Warrior,1522
+"Blood Elf",Mage,1392
+"Blood Elf",Warlock,1271
+Troll,Hunter,1060
+"Blood Elf",Hunter,1022
+"Blood Elf",Rogue,924
+Tauren,Druid,917
+Troll,Shaman,898
+Tauren,Warrior,876
+Orc,Rogue,858
+Orc,Hunter,724
+Undead,Rogue,719
+"Blood Elf",Priest,690
+Undead,Warlock,685
+Troll,Rogue,675
+"Blood Elf","Death Knight",672
+Orc,Shaman,606
+Undead,Warrior,576
+Undead,Mage,574
+Troll,Mage,506
+Tauren,Shaman,480
+Orc,Warlock,397
+Troll,Priest,372
+Undead,Priest,366
+Tauren,Hunter,315
+Tauren,"Death Knight",185
+Undead,"Death Knight",166
+Orc,"Death Knight",115
+Troll,"Death Knight",43
