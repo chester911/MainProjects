@@ -98,6 +98,30 @@ where user_id in (select user_id
 group by 1
 order by 2 desc;
 
+-- select case when max_lv between 1 and 9 then '~10'
+-- 			when max_lv between 10 and 19 then '10~19'
+--             when max_lv between 20 and 29 then '20~29'
+--             when max_lv between 30 and 39 then '30~39'
+--             when max_lv between 40 and 49 then '40~49'
+--             when max_lv between 50 and 59 then '50~59'
+--             when max_lv between 60 and 69 then '60~69'
+--             when max_lv between 70 and 79 then '70~79'
+--             else '80~'
+-- 		end as level_bin,
+--         count(distinct user_id) as user_cnt
+-- from
+-- -- 유저 별 최대 레벨
+-- 	(select user_id,
+-- 		max(level) as max_lv
+-- 	from
+-- 		(select user_id,
+-- 			level
+-- 		from wow.history) as a
+-- 	group by 1
+-- 	order by 2) as a
+-- group by 1
+-- order by 1;
+
 # 이탈?
 -- 첫 접속 이후 한 달 이상 접속하지 않은 유저들
 select month_since_join,
