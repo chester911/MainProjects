@@ -12,5 +12,6 @@
 
 ## 3. 전자제품 매장 매출 증가 원인 분석
 ### 가상의 전자제품 매장 고객 활동 데이터를 활용해 2020년 11월 매출 증가의 원인을 분석한 프로젝트
-* SQL, Tableau
+* SQL
 * MySQL Import 속도 문제로 전체 데이터 중 50&만 활용 (약 44만 row)
+* https://github.com/chester911/MainProjects/tree/main/eCommerce/commerce_log
