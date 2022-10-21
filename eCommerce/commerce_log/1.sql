@@ -43,3 +43,24 @@ from
 		on a.user_id= b.user_id
 group by 1
 order by 1;
+
+# 이탈? (churn)
+with temptable as
+(select user_id,
+	order_date,
+    lag(order_date, 1) over(partition by user_id order by order_date) as tmp
+from
+	(select user_id,
+		substr(event_time, 1, 10) as order_date,
+		count(distinct user_session) as orders
+	from commerce_log.event
+	where event_type= 'purchase'
+	group by 1, 2
+	order by 1, 2) as a)
+
+select *
+from
+	(select *,
+		timestampdiff(week, tmp, order_date) as week_diff
+	from temptable) as a
+where week_diff>= 4
