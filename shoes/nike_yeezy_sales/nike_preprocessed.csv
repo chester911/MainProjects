@@ -1,0 +1,113 @@
+Order_Date,Brand,Sneaker,Sale,Retail,Profit,ProfitPercent,Buyer_Region,date
+2018-01-15,"Off White","Air Jordan 1 Retro High Off White Chicago","1,525",190,1335,702.6315789,"New York",01-15
+2018-01-15,"Off White","Air Jordan 1 Retro High Off White Chicago","1,661",190,1471,774.2105263,Texas,01-15
+2018-01-15,"Off White","Air Force 1 Low Off White",615,170,445,261.7647059,California,01-15
+2018-01-15,"Off White","Air Force 1 Low Off White",625,170,455,267.6470588,Texas,01-15
+2018-01-15,"Off White","Air Max 97 Off White",750,190,560,294.7368421,Michigan,01-15
+2018-01-15,"Off White","Air Max 97 Off White",620,190,430,226.3157895,Massachusetts,01-15
+2018-01-15,"Off White","Air Presto Off White","1,150",160,990,618.75,California,01-15
+2018-01-15,"Off White","Air VaporMax Off White",805,250,555,222,Pennsylvania,01-15
+2018-01-15,"Off White","Blazer Mid Off White",660,130,530,407.6923077,Illinois,01-15
+2018-01-15,"Off White","Blazer Mid Off White",690,130,560,430.7692308,Colorado,01-15
+2018-01-15,"Off White","React Hyperdunk 2017 Flyknit Off White",450,200,250,125,"New Jersey",01-15
+2018-01-15,"Off White","React Hyperdunk 2017 Flyknit Off White",360,200,160,80,"New York",01-15
+2018-01-15,"Off White","React Hyperdunk 2017 Flyknit Off White",399,200,199,99.5,Kansas,01-15
+2018-01-15,"Off White","React Hyperdunk 2017 Flyknit Off White",431,200,231,115.5,"North Carolina",01-15
+2018-01-15,"Off White","Zoom Fly Off White",385,170,215,126.4705882,"New York",01-15
+2018-01-16,"Off White","Air Jordan 1 Retro High Off White Chicago","1,725",190,1535,807.8947368,Georgia,01-16
+2018-01-16,"Off White","Air Jordan 1 Retro High Off White Chicago","1,555",190,1365,718.4210526,Pennsylvania,01-16
+2018-01-16,"Off White","Air Max 97 Off White",610,190,420,221.0526316,Arizona,01-16
+2018-01-16,"Off White","Air Max 97 Off White",609,190,419,220.5263158,Utah,01-16
+2018-01-16,"Off White","Air Presto Off White","1,150",160,990,618.75,California,01-16
+2018-01-16,"Off White","Air Presto Off White",950,160,790,493.75,California,01-16
+2018-01-16,"Off White","Air VaporMax Off White",870,250,620,248,Virginia,01-16
+2018-01-16,"Off White","Blazer Mid Off White",700,130,570,438.4615385,Utah,01-16
+2018-01-16,"Off White","React Hyperdunk 2017 Flyknit Off White",405,200,205,102.5,Ohio,01-16
+2018-01-16,"Off White","React Hyperdunk 2017 Flyknit Off White",400,200,200,100,Connecticut,01-16
+2018-01-16,"Off White","React Hyperdunk 2017 Flyknit Off White",435,200,235,117.5,Texas,01-16
+2018-01-16,"Off White","Zoom Fly Off White",500,170,330,194.1176471,Washington,01-16
+2018-01-17,"Off White","Air Jordan 1 Retro High Off White Chicago","1,700",190,1510,794.7368421,Colorado,01-17
+2018-01-17,"Off White","Air Jordan 1 Retro High Off White Chicago","1,403",190,1213,638.4210526,Arizona,01-17
+2018-01-17,"Off White","Air Jordan 1 Retro High Off White Chicago","1,510",190,1320,694.7368421,"New York",01-17
+2018-01-17,"Off White","Air Force 1 Low Off White",686,170,516,303.5294118,Idaho,01-17
+2018-01-17,"Off White","Air Max 90 Off White",681,160,521,325.625,California,01-17
+2018-01-17,"Off White","Air Max 97 Off White",620,190,430,226.3157895,Georgia,01-17
+2018-01-17,"Off White","Air Max 97 Off White",620,190,430,226.3157895,"New Hampshire",01-17
+2018-01-17,"Off White","Air Presto Off White",961,160,801,500.625,Arizona,01-17
+2018-01-17,"Off White","Air Presto Off White","1,080",160,920,575,California,01-17
+2018-01-17,"Off White","Air VaporMax Off White",770,250,520,208,"New York",01-17
+2018-01-17,"Off White","Air VaporMax Off White",875,250,625,250,"South Carolina",01-17
+2018-01-17,"Off White","Blazer Mid Off White",725,130,595,457.6923077,Georgia,01-17
+2018-01-17,"Off White","Blazer Mid Off White",702,130,572,440,California,01-17
+2018-01-17,"Off White","Blazer Mid Off White",700,130,570,438.4615385,"New Hampshire",01-17
+2018-01-17,"Off White","React Hyperdunk 2017 Flyknit Off White",451,200,251,125.5,"New Jersey",01-17
+2018-01-17,"Off White","React Hyperdunk 2017 Flyknit Off White",440,200,240,120,"West Virginia",01-17
+2018-01-17,"Off White","Zoom Fly Off White",550,170,380,223.5294118,Florida,01-17
+2018-01-18,"Off White","Air Jordan 1 Retro High Off White Chicago","1,550",190,1360,715.7894737,Oklahoma,01-18
+2018-01-18,"Off White","Air Jordan 1 Retro High Off White Chicago","1,575",190,1385,728.9473684,"New York",01-18
+2018-01-18,"Off White","Air Jordan 1 Retro High Off White Chicago","1,560",190,1370,721.0526316,California,01-18
+2018-01-18,"Off White","Air Force 1 Low Off White",721,170,551,324.1176471,Florida,01-18
+2018-01-18,"Off White","Air Force 1 Low Off White",710,170,540,317.6470588,Pennsylvania,01-18
+2018-01-18,"Off White","Air Max 90 Off White",530,160,370,231.25,Ohio,01-18
+2018-01-18,"Off White","Air Max 90 Off White",630,160,470,293.75,"New Jersey",01-18
+2018-01-18,"Off White","Air Max 97 Off White",610,190,420,221.0526316,California,01-18
+2018-01-18,"Off White","Air Max 97 Off White",639,190,449,236.3157895,Pennsylvania,01-18
+2018-01-18,"Off White","Air Max 97 Off White",639,190,449,236.3157895,California,01-18
+2018-01-18,"Off White","Air Presto Off White",960,160,800,500,"South Carolina",01-18
+2018-01-18,"Off White","Air Presto Off White","1,000",160,840,525,"New Mexico",01-18
+2018-01-18,"Off White","Air Presto Off White","1,319",160,1159,724.375,"New Jersey",01-18
+2018-01-18,"Off White","Air VaporMax Off White",792,250,542,216.8,California,01-18
+2018-01-18,"Off White","Air VaporMax Off White",666,250,416,166.4,Delaware,01-18
+2018-01-18,"Off White","Blazer Mid Off White",685,130,555,426.9230769,Illinois,01-18
+2018-01-18,"Off White","Blazer Mid Off White",745,130,615,473.0769231,California,01-18
+2018-01-18,"Off White","React Hyperdunk 2017 Flyknit Off White",408,200,208,104,California,01-18
+2018-01-18,"Off White","Zoom Fly Off White",531,170,361,212.3529412,California,01-18
+2018-01-18,"Off White","Zoom Fly Off White",564,170,394,231.7647059,"New York",01-18
+2018-01-19,"Off White","Air Jordan 1 Retro High Off White Chicago","1,480",190,1290,678.9473684,Florida,01-19
+2018-01-19,"Off White","Air Jordan 1 Retro High Off White Chicago","1,299",190,1109,583.6842105,Virginia,01-19
+2018-01-19,"Off White","Air Force 1 Low Off White",706,170,536,315.2941176,Florida,01-19
+2018-01-19,"Off White","Air Max 90 Off White",690,160,530,331.25,Texas,01-19
+2018-01-19,"Off White","Air Max 90 Off White",625,160,465,290.625,Florida,01-19
+2018-01-19,"Off White","Air Max 97 Off White",644,190,454,238.9473684,Illinois,01-19
+2018-01-19,"Off White","Air Max 97 Off White",645,190,455,239.4736842,California,01-19
+2018-01-19,"Off White","Air Max 97 Off White",615,190,425,223.6842105,Texas,01-19
+2018-01-19,"Off White","Air Presto Off White","1,030",160,870,543.75,"Rhode Island",01-19
+2018-01-19,"Off White","Air Presto Off White","1,100",160,940,587.5,California,01-19
+2018-01-19,"Off White","Air Presto Off White","1,253",160,1093,683.125,"New Hampshire",01-19
+2018-01-19,"Off White","Air VaporMax Off White",875,250,625,250,"District of Columbia",01-19
+2018-01-19,"Off White","Air VaporMax Off White",611,250,361,144.4,Pennsylvania,01-19
+2018-01-19,"Off White","Blazer Mid Off White",622,130,492,378.4615385,"New York",01-19
+2018-01-19,"Off White","React Hyperdunk 2017 Flyknit Off White",424,200,224,112,California,01-19
+2018-01-19,"Off White","React Hyperdunk 2017 Flyknit Off White",406,200,206,103,Oregon,01-19
+2018-01-19,"Off White","Zoom Fly Off White",425,170,255,150,California,01-19
+2018-01-19,"Off White","Zoom Fly Off White",465,170,295,173.5294118,Michigan,01-19
+2018-01-20,"Off White","Air Jordan 1 Retro High Off White Chicago","1,630",190,1440,757.8947368,California,01-20
+2018-01-20,"Off White","Air Jordan 1 Retro High Off White Chicago","1,460",190,1270,668.4210526,"New York",01-20
+2018-01-20,"Off White","Air Force 1 Low Off White",785,170,615,361.7647059,California,01-20
+2018-01-20,"Off White","Air Force 1 Low Off White",700,170,530,311.7647059,Virginia,01-20
+2018-01-20,"Off White","Air Max 90 Off White",677,160,517,323.125,Virginia,01-20
+2018-01-20,"Off White","Air Max 90 Off White",711,160,551,344.375,Oregon,01-20
+2018-01-20,"Off White","Air Max 97 Off White",600,190,410,215.7894737,California,01-20
+2018-01-20,"Off White","Air Max 97 Off White",624,190,434,228.4210526,"New Jersey",01-20
+2018-01-20,"Off White","Air Presto Off White","1,230",160,1070,668.75,Illinois,01-20
+2018-01-20,"Off White","Air Presto Off White","1,290",160,1130,706.25,California,01-20
+2018-01-20,"Off White","Air VaporMax Off White",810,250,560,224,"New York",01-20
+2018-01-20,"Off White","Air VaporMax Off White",799,250,549,219.6,California,01-20
+2018-01-20,"Off White","Blazer Mid Off White",585,130,455,350,Ohio,01-20
+2018-01-20,"Off White","Blazer Mid Off White",690,130,560,430.7692308,Texas,01-20
+2018-01-20,"Off White","React Hyperdunk 2017 Flyknit Off White",420,200,220,110,California,01-20
+2018-01-20,"Off White","Zoom Fly Off White",530,170,360,211.7647059,Oregon,01-20
+2018-01-21,"Off White","Air Jordan 1 Retro High Off White Chicago","1,690",190,1500,789.4736842,Georgia,01-21
+2018-01-21,"Off White","Air Force 1 Low Off White",660,170,490,288.2352941,Connecticut,01-21
+2018-01-21,"Off White","Air Force 1 Low Off White",701,170,531,312.3529412,Florida,01-21
+2018-01-21,"Off White","Air Max 90 Off White",680,160,520,325,Colorado,01-21
+2018-01-21,"Off White","Air Max 97 Off White",700,190,510,268.4210526,Florida,01-21
+2018-01-21,"Off White","Air Max 97 Off White",700,190,510,268.4210526,California,01-21
+2018-01-21,"Off White","Air Presto Off White","1,086",160,926,578.75,Illinois,01-21
+2018-01-21,"Off White","Air Presto Off White","1,185",160,1025,640.625,California,01-21
+2018-01-21,"Off White","Air Presto Off White","1,285",160,1125,703.125,California,01-21
+2018-01-21,"Off White","Air VaporMax Off White",790,250,540,216,"New Jersey",01-21
+2018-01-21,"Off White","Air VaporMax Off White",870,250,620,248,Colorado,01-21
+2018-01-21,"Off White","Blazer Mid Off White",615,130,485,373.0769231,California,01-21
+2018-01-21,"Off White","React Hyperdunk 2017 Flyknit Off White",415,200,215,107.5,Texas,01-21
+2018-01-21,"Off White","Zoom Fly Off White",535,170,365,214.7058824,California,01-21
