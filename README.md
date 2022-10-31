@@ -15,3 +15,8 @@
 * SQL
 * MySQL Import 속도 문제로 전체 데이터 중 50&만 활용 (약 44만 row)
 * https://github.com/chester911/MainProjects/tree/main/eCommerce/commerce_log
+
+## 4. 유저 이탈의 패턴과 패턴의 특징
+### 가상의 온라인 쇼핑몰 유저 결제 데이터를 활용해 유저의 이탈 패턴 및 특징 파악
+* MySQL, Tableau(일부 시각화)
+* https://github.com/chester911/MainProjects/tree/main/eCommerce/commerce1/bounce
